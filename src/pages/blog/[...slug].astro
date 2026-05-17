@@ -1,0 +1,49 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const dateFmt = post.data.date.toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<Base title={`${post.data.title} — Kaizen Blue`} description={post.data.description}>
+  <article class="section section--tight">
+    <div class="wrap">
+      <a href="/blog" class="eyebrow" style="display:inline-block;margin-bottom:20px"
+        >&larr; Blog</a
+      >
+      <h1 class="h1" style="max-width:22ch">{post.data.title}</h1>
+      <p class="post-row__date" style="margin-top:14px">{dateFmt}</p>
+
+      <hr class="divider" style="margin:32px 0" />
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      <hr class="divider" style="margin:40px 0 0" />
+
+      <div class="cta-band" style="margin-top:40px">
+        <h2 class="h2">Got a problem worth solving?</h2>
+        <p>No pitch decks, no sales process. Just a conversation.</p>
+        <a href="/contact" class="btn btn--primary btn--lg">
+          Talk to us <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </article>
+</Base>

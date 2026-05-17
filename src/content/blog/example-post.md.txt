@@ -1,0 +1,25 @@
+This file is a template, not a published post.
+
+To publish a new blog post, create a real Markdown file in this folder,
+for example:  src/content/blog/your-post-slug.md
+
+The filename (minus ".md") becomes the URL: /blog/your-post-slug
+
+Use this frontmatter at the top of the file:
+
+---
+title: "Your SAP Transformation Is Actually an AI Opportunity"
+description: "A one-line summary shown on the blog index and in previews."
+date: 2026-05-20
+draft: false
+---
+
+## A heading
+
+Write the post body in standard Markdown below the frontmatter.
+
+Notes:
+- "draft: true" hides the post from the live site.
+- "date" controls ordering (newest first).
+- Delete this template file once real posts exist — it is ignored by the
+  build because it does not end in ".md".

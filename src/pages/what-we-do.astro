@@ -1,0 +1,124 @@
+---
+import Base from "../layouts/Base.astro";
+
+const services = [
+  {
+    index: "Service 01",
+    title: "Enterprise Technology Strategy",
+    body: [
+      "You're migrating to S/4HANA. Or you're stuck between hyperscalers. Or your ERP landscape is a mess and nobody wants to own the decision.",
+      "We've been in that room hundreds of times. We've run SAP transformations for Fortune 500 clients, migrated critical workloads across Azure, AWS, and GCP, and built a global practice that delivered across 27 countries.",
+    ],
+    list: [
+      "SAP S/4HANA strategy, migration, and platform decisions",
+      "Hyperscaler evaluation and cloud architecture (Azure, AWS, GCP)",
+      "ERP modernisation roadmaps",
+      "Vendor and partner selection",
+      "Technology due diligence for M&A",
+    ],
+  },
+  {
+    index: "Service 02",
+    title: "AI Implementation",
+    body: [
+      "AI is moving fast. Most companies are stuck between “we should do something with AI” and actually doing it. We close that gap.",
+      "We completed Harvard Business School's AI for Business Leaders program, then went straight into building. We run AI systems in production every day. We know what works, what's hype, and where the real value sits for enterprise.",
+    ],
+    list: [
+      "AI readiness assessment and strategy",
+      "LLM integration into business workflows",
+      "Agentic systems and intelligent automation",
+      "AI ops: getting AI into production and keeping it there",
+      "Internal AI tooling and process automation",
+      "Training teams to actually use AI, not just talk about it",
+    ],
+  },
+  {
+    index: "Service 03",
+    title: "Technology M&A and Practice Building",
+    body: [
+      "Most technology acquisitions fail at integration. We've done six in under two years across Australia, the US, Switzerland, Brazil, Poland, and the UK, all successfully integrated into a single global practice of 500+ consultants.",
+      "If you're buying a technology company, building a services practice, or trying to figure out how to integrate what you just acquired, we've been there.",
+    ],
+    list: [
+      "Technology M&A due diligence and target assessment",
+      "Post-acquisition integration planning and execution",
+      "Services practice design and scaling",
+      "Global delivery model setup",
+      "Strategic partnership development",
+    ],
+  },
+];
+---
+
+<Base
+  title="What We Do — Kaizen Blue"
+  description="Enterprise technology strategy, AI implementation, technology M&A, and hands-on execution. We don't sell hours. We sell outcomes."
+>
+  <section class="pagehead">
+    <div class="wrap">
+      <span class="eyebrow">What we do</span>
+      <h1 class="h1">We don't sell hours. We sell outcomes.</h1>
+      <p class="lead pagehead__intro">
+        Every engagement starts the same way: what's the actual problem, and
+        what's the fastest path to fixing it?
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      {
+        services.map((s) => (
+          <article class="service">
+            <div class="service__head">
+              <span class="service__index">{s.index}</span>
+            </div>
+            <h2 class="h2">{s.title}</h2>
+            <div class="service__body">
+              {s.body.map((para) => (
+                <p>{para}</p>
+              ))}
+              <ul class="checklist">
+                {s.list.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))
+      }
+
+      <!-- Service 4 — no checklist, just the punch -->
+      <article class="service">
+        <div class="service__head">
+          <span class="service__index">Service 04</span>
+        </div>
+        <h2 class="h2">Execution and Delivery</h2>
+        <div class="service__body">
+          <p>
+            Sometimes you just need someone who gets things done. A project
+            that's stuck. A transformation that's gone sideways. A decision
+            nobody wants to make.
+          </p>
+          <p>
+            We get in, figure out the real problem, and fix it. No politics, no
+            committees, no death by PowerPoint.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2 class="h2">What's the actual problem?</h2>
+        <p>Tell us. We'll tell you the fastest path to fixing it.</p>
+        <a href="/contact" class="btn btn--primary btn--lg">
+          Talk to us <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

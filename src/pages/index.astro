@@ -1,0 +1,92 @@
+---
+import Base from "../layouts/Base.astro";
+
+const pillars = [
+  {
+    num: "01",
+    title: "Enterprise Technology Strategy",
+    body: "Cloud migrations, ERP transformations, platform decisions. We've done this at scale across five continents and we know what works. More importantly, we know what doesn't.",
+  },
+  {
+    num: "02",
+    title: "AI That Actually Does Something",
+    body: "Not a chatbot on your homepage. We build and implement AI systems that change how your business operates. LLMs, agentic workflows, intelligent automation. Practical, not theoretical.",
+  },
+  {
+    num: "03",
+    title: "Execution, Not Advisory",
+    body: "We don't hand you a strategy deck and disappear. We get in, we build, we fix, we ship. If it needs doing, we do it.",
+  },
+];
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="h-display hero__headline">
+        We make enterprise technology <span class="grad">actually work</span>.
+      </h1>
+      <p class="lead hero__sub">
+        Strategy, transformation, and AI. Not slides and frameworks. Real
+        execution, real outcomes.
+      </p>
+      <div class="hero__cta">
+        <a href="/contact" class="btn btn--primary btn--lg">
+          Talk to us <span class="arrow">&rarr;</span>
+        </a>
+        <a href="/what-we-do" class="btn btn--ghost btn--lg">What we do</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Three pillars -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">What we bring</span>
+      <div class="grid grid--3" style="margin-top:26px">
+        {
+          pillars.map((p) => (
+            <article class="card">
+              <span class="card__num">{p.num}</span>
+              <h3 class="h3">{p.title}</h3>
+              <p>{p.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility line -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cred">
+        <span class="eyebrow">Who's behind it</span>
+        <p>
+          Founded by <strong class="blue">Daniel Da Vinci</strong>. 15+ years in
+          enterprise tech. Six M&amp;A deals across five continents at
+          SoftwareONE. Now deep in AI. Based in Singapore.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2 class="h2">Got something that needs doing?</h2>
+        <p>
+          No pitch decks, no sales process. Tell us the problem and we'll tell
+          you the fastest path to fixing it.
+        </p>
+        <a href="/contact" class="btn btn--primary btn--lg">
+          Start a conversation <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

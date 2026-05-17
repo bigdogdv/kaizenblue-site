@@ -1,0 +1,118 @@
+---
+import Base from "../layouts/Base.astro";
+
+const stats = [
+  { num: "15+", label: "Years in enterprise tech" },
+  { num: "6", label: "Acquisitions in under 2 years" },
+  { num: "27", label: "Countries delivered across" },
+  { num: "500+", label: "Consultants in the practice built" },
+];
+---
+
+<Base
+  title="About — Kaizen Blue"
+  description="Kaizen Blue is a technology strategy and consulting firm founded by Daniel Da Vinci, working at the intersection of enterprise technology, cloud, and AI."
+>
+  <section class="pagehead">
+    <div class="wrap">
+      <span class="eyebrow">About</span>
+      <h1 class="h1">Small by design. Built to get things done.</h1>
+      <p class="lead pagehead__intro">
+        Kaizen Blue is a technology strategy and consulting firm founded by
+        Daniel Da Vinci. We work at the intersection of enterprise technology,
+        cloud, and AI.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="stats">
+        {
+          stats.map((s) => (
+            <div class="stat">
+              <div class="stat__num">{s.num}</div>
+              <div class="stat__label">{s.label}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="prose">
+        <h2>The real version</h2>
+        <p>
+          I started Kaizen Blue because I was tired of watching big
+          consultancies charge millions for slide decks that never get executed.
+          I'd spent years inside the machine: running SAP cloud transformations,
+          leading a global practice at SoftwareONE, buying and integrating six
+          companies across five continents. I knew what good looked like. I also
+          knew that most of the industry was selling process, not progress.
+        </p>
+        <p>
+          So I built something different. Kaizen Blue is small by design. We
+          don't have 500 consultants and a bench to fill. We have deep
+          expertise, a bias toward action, and a track record of getting things
+          done.
+        </p>
+        <p>
+          The name comes from <strong>kaizen</strong>, the Japanese philosophy
+          of continuous improvement. That's how we operate. Not big bang
+          transformations that take three years and cost a fortune. Steady,
+          relentless progress. Every week better than the last.
+        </p>
+
+        <h2>About Daniel</h2>
+        <p>
+          15+ years in enterprise technology. I've run SAP cloud
+          transformations for Fortune 500 clients across APAC, EMEA, and the
+          Americas. At SoftwareONE I led the global SAP Services practice and
+          drove six acquisitions in under two years: BNW (Australia), Optimum
+          Consulting (US), ITPC (Switzerland), ITST (Brazil), SE16N (Poland),
+          and Centiq (UK). That built a 500+ consultant practice across 27
+          countries. I also secured the strategic partnership with Microsoft for
+          SAP on Azure.
+        </p>
+        <p>
+          Now I'm deep in AI. I completed Harvard Business School's AI for
+          Business Leaders program and went straight into building. I run LLMs,
+          agentic workflows, and intelligent automation across Kaizen Blue, and
+          I'm driving AI ops in enterprise environments at Syensqo. I build with
+          AI every day. Not from a slide deck. From a terminal.
+        </p>
+        <p>
+          I push performance in everything I touch. Strategy, execution,
+          technology, people. I don't sit in advisory mode and hand over a PDF.
+          I get in, I figure it out, I make it work.
+        </p>
+
+        <h3>Previously</h3>
+        <p>
+          SoftwareONE (Global SAP Practice Leader), SAP (Technology Consultant),
+          plus work with Microsoft and various enterprise clients globally.
+        </p>
+        <p>
+          Based in Singapore and Japan. &mdash;
+          <a href="https://www.linkedin.com/in/davincidaniel" rel="noopener" target="_blank">
+            linkedin.com/in/davincidaniel
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2 class="h2">Want to put that experience to work?</h2>
+        <p>No pitch decks, no sales process. Just a conversation.</p>
+        <a href="/contact" class="btn btn--primary btn--lg">
+          Get in touch <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
