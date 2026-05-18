@@ -20,7 +20,7 @@ const upcoming = [
   },
   {
     title: "I Use AI Every Day. Here's What Actually Works in Enterprise.",
-    desc: "An honest take on what AI tools and approaches deliver real value versus what's still hype. From hands-on experience, not analyst reports.",
+    desc: "Honest take on what AI tools and approaches deliver real value vs what's still hype. Written from hands-on experience, not analyst reports.",
   },
   {
     title: "Six Acquisitions in Two Years: What I Learned About Technology M&A",
@@ -60,7 +60,7 @@ const upcoming = [
         ) : (
           <>
             <div class="empty">
-              <h3 class="h3">Nothing published yet.</h3>
+              <h2 class="h3">Nothing published yet.</h2>
               <p>
                 First pieces are being written. Here's what's on the way &mdash;
                 no fluff, just the things worth saying.
@@ -69,6 +69,7 @@ const upcoming = [
             <div class="topics">
               {upcoming.map((t) => (
                 <div class="topics__item">
+                  <span class="topics__tag">Coming soon</span>
                   <div class="topics__title">{t.title}</div>
                   <div class="topics__desc">{t.desc}</div>
                 </div>
