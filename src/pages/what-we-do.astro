@@ -6,46 +6,60 @@ const services = [
     index: "Service 01",
     title: "Enterprise Technology Strategy",
     body: [
-      "You're migrating to S/4HANA. Or you're stuck between hyperscalers. Or your ERP landscape is a mess and nobody wants to own the decision.",
-      "We've been in that room hundreds of times. We've run SAP transformations for Fortune 500 clients, migrated critical workloads across Azure, AWS, and GCP, and built a global practice that delivered across 27 countries.",
+      "You're moving to S/4HANA. You're stuck between hyperscalers. Your ERP estate is a tangle and nobody on the executive committee wants to own the decision.",
+      "Kaizen Blue has been in those rooms hundreds of times. Our team has run SAP transformations for Fortune 500 clients, migrated mission-critical workloads across Azure, AWS, and GCP, and built a delivery practice that operated in 27 countries. We've seen what works at scale, and — more usefully — what doesn't.",
     ],
     list: [
-      "SAP S/4HANA strategy, migration, and platform decisions",
-      "Hyperscaler evaluation and cloud architecture (Azure, AWS, GCP)",
-      "ERP modernisation roadmaps",
-      "Vendor and partner selection",
-      "Technology due diligence for M&A",
+      "A platform decision with the real trade-offs surfaced, in weeks",
+      "A migration plan that names risks before they hit",
+      "Hyperscaler architecture (Azure, AWS, GCP) chosen on merit, not on kickback economics",
+      "Vendor and partner selection with no soft alliances steering the recommendation",
+      "Technology due diligence for M&A — usable inside the data room, not after the deal closes",
     ],
   },
   {
     index: "Service 02",
     title: "AI Implementation",
     body: [
-      "AI is moving fast. Most companies are stuck between “we should do something with AI” and actually doing it. We close that gap.",
-      "We completed Harvard Business School's AI for Business Leaders program, then went straight into building. We run AI systems in production every day. We know what works, what's hype, and where the real value sits for enterprise.",
+      "Most companies are stuck between “we should do something with AI” and actually doing it. Kaizen Blue closes that gap.",
+      "We don't run AI workshops. We ship AI systems. Our team builds with LLMs, agentic workflows, and intelligent automation every day, and puts those systems into production for enterprise clients. We know what works at scale, what's hype, and what looks great in a demo but breaks the first time a real user touches it.",
     ],
     list: [
-      "AI readiness assessment and strategy",
-      "LLM integration into business workflows",
-      "Agentic systems and intelligent automation",
-      "AI ops: getting AI into production and keeping it there",
-      "Internal AI tooling and process automation",
-      "Training teams to actually use AI, not just talk about it",
+      "An AI readiness assessment that names what's worth doing and what isn't",
+      "LLM integration into the workflows that actually move the P&L",
+      "Agentic systems and intelligent automation in production",
+      "AI ops — the work most pilots skip and most “AI strategies” never reach",
+      "Internal AI tooling that compounds across teams",
+      "Practical training — your people using AI on real work, not your people in a Zoom about AI",
     ],
   },
   {
     index: "Service 03",
     title: "Technology M&A and Practice Building",
     body: [
-      "Most technology acquisitions fail at integration. We've done six in under two years across Australia, the US, Switzerland, Brazil, Poland, and the UK, all successfully integrated into a single global practice of 500+ consultants.",
-      "If you're buying a technology company, building a services practice, or trying to figure out how to integrate what you just acquired, we've been there.",
+      "Most technology acquisitions destroy value at integration. Ours don't.",
+      "Kaizen Blue's leadership has delivered six technology acquisitions across Australia, the US, Switzerland, Brazil, Poland, and the UK — all integrated into a single global practice of more than 500 consultants — and structured the strategic Microsoft / SAP-on-Azure partnership that underpinned it. If you're acquiring a tech company, scaling a services practice, or trying to figure out how to integrate what you just bought, this is work we have done end to end.",
     ],
     list: [
-      "Technology M&A due diligence and target assessment",
-      "Post-acquisition integration planning and execution",
-      "Services practice design and scaling",
-      "Global delivery model setup",
-      "Strategic partnership development (we secured the Microsoft SAP on Azure strategic agreement at SoftwareONE)",
+      "Technology M&A diligence and target assessment",
+      "Post-acquisition integration plans that ship in weeks, not quarters",
+      "Services-practice design and scaling — from boutique to global",
+      "Global delivery model setup, including offshore where it earns its keep",
+      "Strategic partnerships with hyperscalers and ISVs",
+    ],
+  },
+  {
+    index: "Service 04",
+    title: "Execution & Delivery",
+    body: [
+      "Sometimes the right answer isn't another strategy. It's someone who'll get in and finish the job.",
+      "We take on programs that have stalled, transformations that have gone sideways, and the decisions the executive committee keeps pushing to the next meeting. We're not advisors with PowerPoint. We're operators with strategy depth — small, senior, and accountable for what ships.",
+    ],
+    list: [
+      "Honest diagnostic in week one",
+      "A small senior team — no offshore body shop, no learning on your dime",
+      "Decisions made, not parked",
+      "Working output, handed back to your team to run",
     ],
   },
 ];
@@ -53,15 +67,16 @@ const services = [
 
 <Base
   title="What We Do — Kaizen Blue"
-  description="Enterprise technology strategy, AI implementation, technology M&A, and hands-on execution. We don't sell hours. We sell outcomes."
+  description="Enterprise technology strategy, AI implementation, technology M&A, and hands-on execution. We don't sell hours — we sell outcomes."
 >
   <section class="pagehead">
     <div class="wrap">
       <span class="eyebrow">What we do</span>
       <h1 class="h1">We don't sell hours. We sell outcomes.</h1>
       <p class="lead pagehead__intro">
-        Every engagement starts the same way: what's the actual problem, and
-        what's the fastest path to fixing it?
+        Every engagement starts the same way. What's the actual problem. What's
+        the fastest path to fixing it. What does “fixed” look like in numbers.
+        And where it makes sense, we tie our fees to them.
       </p>
     </div>
   </section>
@@ -79,6 +94,9 @@ const services = [
               {s.body.map((para) => (
                 <p>{para}</p>
               ))}
+              <span class="eyebrow" style="display:block;margin-top:26px">
+                What you get
+              </span>
               <ul class="checklist">
                 {s.list.map((item) => (
                   <li>{item}</li>
@@ -88,25 +106,6 @@ const services = [
           </article>
         ))
       }
-
-      <!-- Service 4 — no checklist, just the punch -->
-      <article class="service">
-        <div class="service__head">
-          <span class="service__index">Service 04</span>
-        </div>
-        <h2 class="h2">Execution and Delivery</h2>
-        <div class="service__body">
-          <p>
-            Sometimes you just need someone who gets things done. A project
-            that's stuck. A transformation that's gone sideways. A decision
-            nobody wants to make.
-          </p>
-          <p>
-            We get in, figure out the real problem, and fix it. No politics, no
-            committees, no death by PowerPoint.
-          </p>
-        </div>
-      </article>
     </div>
   </section>
 
@@ -114,7 +113,10 @@ const services = [
     <div class="wrap">
       <div class="cta-band">
         <h2 class="h2">What's the actual problem?</h2>
-        <p>Tell us. We'll tell you the fastest path to fixing it.</p>
+        <p>
+          Tell us. We'll tell you the fastest path to fixing it, what it should
+          cost, and who'll be on the engagement.
+        </p>
         <a href="/contact" class="btn btn--primary btn--lg">
           Talk to us <span class="arrow">&rarr;</span>
         </a>

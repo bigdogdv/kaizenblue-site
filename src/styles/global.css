@@ -435,6 +435,15 @@ p + p {
   font-size: 0.98rem;
 }
 
+.card__proof {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--blue-bright);
+}
+
 /* ---------- credibility strip ---------- */
 
 .cred {

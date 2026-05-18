@@ -1,22 +1,41 @@
 ---
 import Base from "../layouts/Base.astro";
 
-const pillars = [
+const capabilities = [
   {
     num: "01",
     title: "Enterprise Technology Strategy",
-    body: "Cloud migrations, ERP transformations, platform decisions. We've done this at scale across five continents and we know what works. More importantly, we know what doesn't.",
+    statement: "S/4HANA, cloud architecture, ERP modernisation, vendor decisions.",
+    proof: "Delivered for Fortune 500 clients across 27 countries.",
   },
   {
     num: "02",
-    title: "AI That Actually Does Something",
-    body: "Not a chatbot on your homepage. We build and implement AI systems that change how your business operates. LLMs, agentic workflows, intelligent automation. Practical, not theoretical.",
+    title: "AI Implementation",
+    statement:
+      "Production-grade LLMs, agentic workflows, and intelligent automation — not pilots, not demos.",
+    proof: "Currently running AI ops in live enterprise environments.",
   },
   {
     num: "03",
-    title: "Execution, Not Advisory",
-    body: "We don't hand you a strategy deck and disappear. We get in, we build, we fix, we ship. If it needs doing, we do it.",
+    title: "Technology M&A",
+    statement:
+      "Diligence, integration, and post-merger execution. The work that determines whether a deal actually creates value.",
+    proof: "Six acquisitions integrated across five continents in under two years.",
   },
+  {
+    num: "04",
+    title: "Execution & Delivery",
+    statement:
+      "The work the big firms aren't structured to take on: stalled programs, transformations gone sideways, the decisions nobody wants to own.",
+    proof: null,
+  },
+];
+
+const stats = [
+  { num: "27", label: "Countries delivered across" },
+  { num: "6", label: "Technology acquisitions integrated" },
+  { num: "500+", label: "Consultants built into a single global practice" },
+  { num: "15+", label: "Years inside Fortune 500 transformations" },
 ];
 ---
 
@@ -25,34 +44,35 @@ const pillars = [
   <section class="hero">
     <div class="wrap">
       <h1 class="h-display hero__headline">
-        We make enterprise technology <span class="grad">actually work</span>.
+        The consulting firm that <span class="grad">actually executes</span>.
       </h1>
       <p class="lead hero__sub">
-        Strategy, transformation, and AI. Not slides and frameworks. Real
-        execution, real outcomes.
+        Top-tier strategy. Real implementation. We don't write 80-page decks and
+        disappear. We build the systems that prove the strategy works.
       </p>
       <div class="hero__cta">
         <a href="/contact" class="btn btn--primary btn--lg">
-          Talk to us <span class="arrow">&rarr;</span>
+          Start a conversation <span class="arrow">&rarr;</span>
         </a>
-        <a href="/what-we-do" class="btn btn--ghost btn--lg">What we do</a>
+        <a href="/what-we-do" class="btn btn--ghost btn--lg">See what we do</a>
       </div>
     </div>
   </section>
 
   <hr class="divider" />
 
-  <!-- Three pillars -->
+  <!-- Capability blocks -->
   <section class="section">
     <div class="wrap">
-      <span class="eyebrow">What we bring</span>
-      <div class="grid grid--3" style="margin-top:26px">
+      <span class="eyebrow">What we do</span>
+      <div class="grid grid--2" style="margin-top:26px">
         {
-          pillars.map((p) => (
+          capabilities.map((c) => (
             <article class="card">
-              <span class="card__num">{p.num}</span>
-              <h2 class="h3">{p.title}</h2>
-              <p>{p.body}</p>
+              <span class="card__num">{c.num}</span>
+              <h2 class="h3">{c.title}</h2>
+              <p>{c.statement}</p>
+              {c.proof && <p class="card__proof">{c.proof}</p>}
             </article>
           ))
         }
@@ -60,28 +80,54 @@ const pillars = [
     </div>
   </section>
 
-  <!-- Credibility line -->
+  <!-- Proof strip -->
   <section class="section section--tight">
     <div class="wrap">
-      <div class="cred">
-        <span class="eyebrow">Who's behind it</span>
-        <p>
-          Founded by <strong class="blue">Daniel Da Vinci</strong>. 15+ years in
-          enterprise tech. Six M&amp;A deals across five continents at
-          SoftwareONE. Now deep in AI. Based in Singapore.
-        </p>
+      <span class="eyebrow" style="display:block;margin-bottom:20px"
+        >Why teams choose us</span
+      >
+      <div class="stats">
+        {
+          stats.map((s) => (
+            <div class="stat">
+              <div class="stat__num">{s.num}</div>
+              <div class="stat__label">{s.label}</div>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
 
-  <!-- CTA band -->
+  <!-- Differentiator -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <span class="eyebrow" style="display:block;margin-bottom:16px"
+        >Why we're different</span
+      >
+      <h2 class="h2" style="max-width:20ch">
+        Strategy and execution. Same team. Same week.
+      </h2>
+      <p class="muted" style="max-width:64ch;margin-top:18px">
+        The big firms split strategy from delivery. The strategy team writes the
+        deck, hands it off, and you spend the next 18 months paying a different
+        team to figure out what the first team meant. Kaizen Blue doesn't work
+        that way. The senior who scopes your work is the senior who ships it. You
+        get the rigour of a top-tier firm and the speed of a product team — at a
+        fraction of the cost.
+      </p>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
   <section class="section section--tight">
     <div class="wrap">
       <div class="cta-band">
         <h2 class="h2">Got something that needs doing?</h2>
         <p>
-          No pitch decks, no sales process. Tell us the problem and we'll tell
-          you the fastest path to fixing it.
+          Tell us the problem. We'll tell you the fastest path to fixing it,
+          what it should cost, and who'll be in the room. No pitch deck. No
+          qualifying call.
         </p>
         <a href="/contact" class="btn btn--primary btn--lg">
           Start a conversation <span class="arrow">&rarr;</span>
